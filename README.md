@@ -2,7 +2,7 @@
 
 Landing page + signup flow to gauge interest in Mal (lending product) before launching in Pakistan. One Next.js repo, frontend and backend together, deployed on Vercel with Supabase as the database.
 
-Live: https://mal-project.vercel.app/
+Live: https://mal.azmisal.in
 
 ## Stack
 
@@ -56,6 +56,8 @@ No silent failures — every path returns something the form can show the user.
 ## Deploy
 
 Deployed on Vercel. Set the three env vars above in the project settings, deploy `main`, then go back and set `NEXT_PUBLIC_SITE_URL` to the real production domain and redeploy once so the metadata/sitemap reflect it correctly (chicken-and-egg problem with the first deploy).
+
+Running on a dedicated subdomain (`mal.azmisal.in`) rather than the root domain or a shared path, per the brief's requirement that this be independent of any main app — separate deploy, separate `NEXT_PUBLIC_SITE_URL`, nothing shared with anything else that might live on the root domain later.
 
 Lighthouse (via PageSpeed Insights, not local Chrome — browser extensions badly skew local runs): 98 Performance / 100 Accessibility / 100 Best Practices / 100 SEO.
 
